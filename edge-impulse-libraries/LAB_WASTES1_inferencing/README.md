@@ -1,0 +1,48 @@
+# LAB_WASTES1_inferencing
+
+**Version:** 1.0.3  
+**Author:** EdgeImpulse Inc.
+
+This is an Arduino library exported from Edge Impulse for the project **LAB_WASTES1**.
+
+## 🧠 What It Does
+This library contains a pre-trained Machine Learning model designed to classify lab waste. It runs entirely on-device (Edge AI) without needing an internet connection.
+
+It includes:
+- **Digital Signal Processing (DSP)** blocks to process raw sensor data.
+- **Neural Network (NN)** model (TensorFlow Lite for Microcontrollers) to classify the processed data.
+- **Inference Engine** to run the model efficiently on embedded hardware.
+
+It takes raw input (image, audio, or motion depending on the example) and outputs a probability score for each class.
+
+## 🚀 How to Use
+
+### 1. Installation
+1.  **Copy Folder**: Ensure this folder (`LAB_WASTES1_inferencing`) is located inside your Arduino `libraries` folder (usually found at `Documents/Arduino/libraries/`).
+2.  **Restart IDE**: If the Arduino IDE is currently open, restart it to load the new library.
+
+### 2. Running an Example
+The library comes with pre-built examples for various development boards.
+
+1.  Open the Arduino IDE.
+2.  Go to **File > Examples > LAB_WASTES1_inferencing**.
+3.  Select your board architecture (e.g., `nano_ble33_sense`, `esp32`, `nicla_vision`).
+4.  Select the sensor type matching your hardware setup (e.g., `camera`, `microphone`, `accelerometer`).
+
+### 3. Dependencies
+Depending on the example you run, you may need to install specific sensor libraries via the Arduino Library Manager:
+- **Nano 33 BLE Sense**: Requires `Arduino_LSM9DS1` (IMU) or `PDM` (Microphone).
+- **Camera**: May require `Arduino_OV767X` or similar depending on the board.
+
+### 4. Viewing Results
+1.  Connect your board via USB.
+2.  Select the correct Port and Board in **Tools**.
+3.  Click **Upload**.
+4.  Once uploaded, open the **Serial Monitor** (**Tools > Serial Monitor**).
+5.  Set the baud rate to **115200**.
+6.  You will see the model predicting classes in real-time:
+    ```text
+    Predictions (DSP: 12 ms., Classification: 25 ms., Anomaly: 0 ms.):
+    Class 1: 0.95
+    Class 2: 0.05
+    ```
