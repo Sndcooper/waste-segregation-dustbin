@@ -40,7 +40,7 @@ Improper waste disposal is a growing environmental problem. Manual sorting is ti
 | **Clear / Empty detection** | Detects when the bin view is clear (no waste present) |
 | **On-device inference** | All inference runs locally on the microcontroller (no internet required) |
 | **Arduino compatible** | Works with ESP32, Arduino Nano 33 BLE Sense, Nicla Vision, Portenta H7, RP2040, Sony Spresense |
-| **Serialoutput** | Real-time predictions printed to the Serial Monitor at 115 200 baud |
+| **Serial output** | Real-time predictions printed to the Serial Monitor at 115 200 baud |
 
 ---
 
